@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using Python.Runtime;
 using Numpy.Models;
-using Python.Included;
+using BH.Engine.Python;
 
 namespace Numpy
 {
@@ -35,11 +35,10 @@ namespace Numpy
         
         private static PyObject InstallAndImport(bool force = false)
         {
-            Installer.SetupPython(force).Wait();
-            Installer.PipInstallModule("numpy");
+            Compute.Install(force).Wait();
+            Compute.PipInstall("numpy");
             PythonEngine.Initialize();
-            var mod = Py.Import("numpy");
-            return mod;
+            return Py.Import("numpy");
         }
         
         public static dynamic dynamic_self => self;
