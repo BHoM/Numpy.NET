@@ -74,6 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Convert\ToNumpy.cs" />
     <Compile Include="External\Constructors.cs" />
     <Compile Include="External\Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
