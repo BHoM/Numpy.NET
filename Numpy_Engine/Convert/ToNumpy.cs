@@ -60,6 +60,13 @@ namespace BH.Engine.Numpy
 
         /***************************************************/
 
+        public static np.NDarray<short> ToNumpy(this List<short> list)
+        {
+            return np.np.array<short>(list.ToArray());
+        }
+
+        /***************************************************/
+
         public static np.NDarray<int> ToNumpy(this List<int> list)
         {
             return np.np.array<int>(list.ToArray());
