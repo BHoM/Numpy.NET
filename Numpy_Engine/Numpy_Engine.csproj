@@ -91,7 +91,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem Install numpy python package at compile time
-$(SolutionDir)../Python_Toolkit/Python_PostBuild/bin/Debug/Python_Postbuild.exe "numpy"</PostBuildEvent>
+    <PostBuildEvent>rem Install keras python package at compile time
+$(SolutionDir)/../Python_Toolkit/Python_PostBuild/bin/Debug/Python_Postbuild.exe "pillow" "tensorflow==2.0"</PostBuildEvent>
   </PropertyGroup>
 </Project>
