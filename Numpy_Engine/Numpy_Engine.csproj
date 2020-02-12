@@ -93,7 +93,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>rem Install keras python package at compile time
-$(SolutionDir)/../Python_Toolkit/Python_PostBuild/bin/Debug/Python_Postbuild.exe "numpy"</PostBuildEvent>
+    <PostBuildEvent>"$(SolutionDir)/../Python_Toolkit/Python_PostBuild/bin/Debug/Python_Postbuild.exe" "numpy"</PostBuildEvent>
   </PropertyGroup>
 </Project>
